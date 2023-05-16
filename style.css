@@ -9,11 +9,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, #fdc830, #f37335);
 }
 
 .calculator {
-  background-color: white;
+  background-color:  rgb(225, 180, 253);
   width: 400px;
   border-radius: 12px;
   box-shadow: 0 5px 30px -5px rgba(0,0,0,0.8);
@@ -21,8 +21,8 @@ body {
 
 /* Display */
 .calculator-display {
-  background: black;
-  color: white;
+  background: gold;
+  color: black;
   margin: 0;
   display: flex;
   align-items: center;
@@ -54,4 +54,58 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.operator {
+  background-color: rgb(157, 0, 255);
+  color: white;
+  font-size: 30px;
+}
+
+.clear {
+  background: rgb(255, 100, 100);
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(184, 115, 51);
+  color: white;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: rgb(251, 78, 187);
+}
+
+/* Media Query: large smarthphone */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
 }
